@@ -37,14 +37,8 @@ namespace EventMaker.Model
         //tilføjer addEvent - gør det muligt at tilføje til vores observablecollection
         public void AddEvent()
         {
-            Event TempEventInfo = new Event();
-            TempEventInfo.Id = NewEvent.Id;
-            TempEventInfo.Name = NewEvent.Name;
-            TempEventInfo.Place = NewEvent.Place;
-            TempEventInfo.Description = NewEvent.Description;
-            TempEventInfo.DateTime = NewEvent.DateTime;
+            EventListe.Add(NewEvent);
 
-            EventListe.Add(TempEventInfo);
         }
 
     }

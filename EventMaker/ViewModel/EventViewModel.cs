@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace EventMaker.ViewModel
 {
@@ -15,6 +16,8 @@ namespace EventMaker.ViewModel
         public string Place { get; set; }
         public DateTimeOffset Date  { get; set; }
         public TimeSpan Time { get; set; }
+
+        public ICommand CreateEventCommand { get; set; }
 
 
         private Model.EventCatalogSingleton minEventCataLogSingleton = Model.EventCatalogSingleton.EventCatalogSingletonInstance;
