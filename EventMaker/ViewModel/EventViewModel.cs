@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using eh=EventMaker.Handler;
 
 namespace EventMaker.ViewModel
 {
@@ -16,8 +17,10 @@ namespace EventMaker.ViewModel
         public string Place { get; set; }
         public DateTimeOffset Date  { get; set; }
         public TimeSpan Time { get; set; }
+        private eh.EventHandler EventHandler { get; set; }
 
         public ICommand CreateEventCommand { get; set; }
+        public Common.RelayCommand MyRelayCommand { get; set; }
 
 
         private Model.EventCatalogSingleton minEventCataLogSingleton = Model.EventCatalogSingleton.EventCatalogSingletonInstance;
@@ -28,6 +31,8 @@ namespace EventMaker.ViewModel
             DateTime dt = System.DateTime.Now;
             Date = new DateTimeOffset(dt.Year, dt.Month, dt.Day, 0, 0, 0, 0, new TimeSpan());
             Time = new TimeSpan(dt.Hour, dt.Minute, dt.Second);
-        }
+            eh.EventHandler eh = new eh.EventHandler();
+            MyRelayCommand = new Common.RelayCommand(eh.CreateEvent);
+         }
     }
 }

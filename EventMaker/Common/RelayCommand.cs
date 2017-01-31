@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace EventMaker.Common
 {
-    class RelayCommand : ICommand
+ public   class RelayCommand : ICommand
     {
         public RelayCommand(Action execute) : this(execute, null)
         {
