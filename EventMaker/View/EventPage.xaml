@@ -10,9 +10,7 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-        <Grid.DataContext>
-            <ViewModel:EventViewModel/>
-        </Grid.DataContext>
+
         <ListView x:Name="listView1" HorizontalAlignment="Left" Height="225" Margin="103,111,0,0" VerticalAlignment="Top" Width="217" DataContext="{Binding MinEventCataLogSingleton}"/>
 
     </Grid>
