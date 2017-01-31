@@ -31,7 +31,7 @@ namespace EventMaker.Model
             EventCatalogSingletonInstance.Add(new Event() { Id = 420, Description = "James Bond", Name = "Yamez Blunt", Place = "UK" });
 
             //event2
-            EventCatalogSingletonInstance.Add(new Event() { Id = 008, Description = "Bind SemaJ", Name = "Blazer Max", Place = "KU" });
+            EventCatalogSingletonInstance.Add(new Event() { Id = 008, Description = "Bind Semaj", Name = "Blazer Max", Place = "KU" });
         }
 
         //tilføjer addEvent - gør det muligt at tilføje til vores observablecollection
