@@ -14,7 +14,7 @@ namespace EventMaker.Model
         //props
         public ObservableCollection<Event> EventListe { get; set; }
         public Event NewEvent { get; set; }
-
+        public ViewModel.EventViewModel Minslected { get; set; }
 
         //laver en singleton
         private static EventCatalogSingleton eventCatalogSingletonInstance = new EventCatalogSingleton();
@@ -34,6 +34,8 @@ namespace EventMaker.Model
 
             //event2
             EventListe.Add(new Event() { Id = 008, Description = "Bind Semaj", Name = "Blazer Max", Place = "KU" });
+
+            Minslected = new ViewModel.EventViewModel();
         }
 
 
@@ -41,14 +43,18 @@ namespace EventMaker.Model
         public void AddEvent()
         {
             EventListe.Add(NewEvent);
+           
         }
 
-
+        //public void SletElev()
+        //{
+        //    PListe.Remove(SelectedElev);
+        //}
         public void RemoveEvent()
         {
-
+            EventListe.Remove(Minslected.selectedEvent);
         }
 
-
+        
     }
 }

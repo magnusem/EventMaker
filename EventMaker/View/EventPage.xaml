@@ -29,6 +29,11 @@
                 <ViewModel:EventViewModel/>
             </TextBlock.DataContext>
         </TextBlock>
+        <Button x:Name="button" Content="Slet" HorizontalAlignment="Left" Margin="605,111,0,0" VerticalAlignment="Top" Command="{Binding DeleteEventCommand}">
+            <Button.DataContext>
+                <ViewModel:EventViewModel/>
+            </Button.DataContext>
+        </Button>
 
     </Grid>
 </Page>
