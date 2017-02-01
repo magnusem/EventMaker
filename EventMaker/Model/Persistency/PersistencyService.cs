@@ -40,17 +40,18 @@ namespace EventMaker.Persistency
 
         public static async void SerializeEventsFileAsync(string eventsString, string fileName)
         {
-
+            StorageFile file = await localfolder.CreateFileAsync(filename, CreationCollisionOption.ReplaceExisting);
+            await FileIO.WriteTextAsync(file, eventsString);
         }
 
 
         public static async Task<string> DeSerializeEventsFileAsync(String fileName)
         {
-            List<Event> nyListe = JsonConvert.DeserializeObject<List<Event>>(fileName);
-            foreach (var e in nyListe)
-            {
-                EventCatalogSingleton.EventCatalogSingletonInstance.EventListe.Add(e);
-            }
+            StorageFile file = await localfolder.GetFileAsync(filename);
+            string jsonText = await FileIO.ReadTextAsync(file);
+
+
+            return jsonText;
         }
     }
 }
