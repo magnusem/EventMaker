@@ -25,21 +25,24 @@ namespace EventMaker.Model
 
 
         //private ctor pga singleton
-        private EventCatalogSingleton() : base()
+        private EventCatalogSingleton()
         {
+            EventListe = new ObservableCollection<Event>();
             //event 1
-            EventCatalogSingletonInstance.EventListe.Add(new Event() { Id = 420, Description = "James Bond", Name = "Yamez Blunt", Place = "UK" });
+            EventListe.Add(new Event() { Id = 420, Description = "James Bond", Name = "Yamez Blunt", Place = "UK" });
 
             //event2
-            EventCatalogSingletonInstance.EventListe.Add(new Event() { Id = 008, Description = "Bind Semaj", Name = "Blazer Max", Place = "KU" });
+            EventListe.Add(new Event() { Id = 008, Description = "Bind Semaj", Name = "Blazer Max", Place = "KU" });
         }
+
 
         //tilføjer addEvent - gør det muligt at tilføje til vores observablecollection
         public void AddEvent()
         {
             EventListe.Add(NewEvent);
-
         }
+
+
 
     }
 }

@@ -1,10 +1,12 @@
-﻿using System;
+﻿using EventMaker.Model;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using eh=EventMaker.Handler;
+using eh = EventMaker.Handler;
 
 namespace EventMaker.ViewModel
 {
@@ -26,6 +28,7 @@ namespace EventMaker.ViewModel
         private Model.EventCatalogSingleton minEventCataLogSingleton = Model.EventCatalogSingleton.EventCatalogSingletonInstance;
         public Model.EventCatalogSingleton MinEventCataLogSingleton { get { return minEventCataLogSingleton; } }
 
+
         public EventViewModel()
         {
             DateTime dt = System.DateTime.Now;
@@ -33,6 +36,7 @@ namespace EventMaker.ViewModel
             Time = new TimeSpan(dt.Hour, dt.Minute, dt.Second);
             eh.EventHandler eh = new eh.EventHandler();
             MyRelayCommand = new Common.RelayCommand(eh.CreateEvent);
+
          }
     }
 }
