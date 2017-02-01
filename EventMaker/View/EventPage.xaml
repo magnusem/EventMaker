@@ -12,7 +12,11 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
 
-        <ListView x:Name="listView1" HorizontalAlignment="Left" Height="487" Margin="103,111,0,0" VerticalAlignment="Top" Width="283" DataContext="{Binding MinEventCataLogSingleton}"/>
+        <ListView x:Name="listView1" HorizontalAlignment="Left" Height="487" Margin="103,111,0,0" VerticalAlignment="Top" Width="283" ItemsSource="{Binding MinEventCataLogSingleton.EventListe}">
+            <ListView.DataContext>
+                <ViewModel:EventViewModel/>
+            </ListView.DataContext>
+        </ListView>
         <AppBarButton x:Name="appBarButton" HorizontalAlignment="Left" Icon="Accept" Label="Create Event" Margin="753,207,0,0" VerticalAlignment="Top" Height="118" Width="162" d:LayoutOverrides="VerticalAlignment">
             <Interactivity:Interaction.Behaviors>
                 <Core:EventTriggerBehavior EventName="Click">
@@ -20,6 +24,11 @@
                 </Core:EventTriggerBehavior>
             </Interactivity:Interaction.Behaviors>
         </AppBarButton>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="605,499,0,0" TextWrapping="Wrap" Text="{Binding selectedEvent}" VerticalAlignment="Top" Height="99" Width="477">
+            <TextBlock.DataContext>
+                <ViewModel:EventViewModel/>
+            </TextBlock.DataContext>
+        </TextBlock>
 
     </Grid>
 </Page>

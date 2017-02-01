@@ -44,11 +44,10 @@ namespace EventMaker.Model
         }
 
 
-        //public void DeleteEvent()
-        //{
-        //    EventListe.Remove(SelectedEvent);
-        //    this.jsonText = this.EventListe.GetJson();
-        //}
+        public void RemoveEvent()
+        {
+
+        }
 
 
     }

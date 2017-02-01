@@ -28,6 +28,11 @@ namespace EventMaker.Handler
             Model.EventCatalogSingleton.EventCatalogSingletonInstance.EventListe.Add(TempEventInfo);
         }
 
+        public void DeleteEvent()
+        {
+            Model.EventCatalogSingleton.EventCatalogSingletonInstance.RemoveEvent();
+        }
+
 
     }
 }

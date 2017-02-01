@@ -5,7 +5,6 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ViewModel="using:EventMaker.ViewModel"
-    xmlns:Interactivity="using:Microsoft.Xaml.Interactivity" xmlns:Core="using:Microsoft.Xaml.Interactions.Core"
     x:Class="EventMaker.View.CreateEventPage"
     mc:Ignorable="d">
 
@@ -14,20 +13,16 @@
         <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="164,344,0,0" TextWrapping="Wrap" Text="Place" VerticalAlignment="Top" Width="104" Height="16"/>
         <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="164,285,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="104" Height="17"/>
         <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Margin="164,227,0,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top" Width="103" Height="16"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="164,190,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="32" Width="185"/>
-        <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Margin="164,307,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="32" Width="185"/>
-        <TextBox x:Name="textBox_Copy1" HorizontalAlignment="Left" Margin="164,248,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="8" Width="185"/>
-        <TextBox x:Name="textBox_Copy2" HorizontalAlignment="Left" Margin="164,365,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="10" Width="185"/>
+        <TextBox x:Name="IDTextBox" HorizontalAlignment="Left" Margin="164,190,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="32" Width="185"/>
+        <TextBox x:Name="DescTextBox" HorizontalAlignment="Left" Margin="164,248,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="8" Width="185"/>
+        <TextBox x:Name="NameTextBox" HorizontalAlignment="Left" Margin="164,307,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="32" Width="185"/>
+        
+        <TextBox x:Name="PlaceTextBox" HorizontalAlignment="Left" Margin="164,365,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="10" Width="185"/>
         <DatePicker HorizontalAlignment="Left" Margin="164,411,0,0" VerticalAlignment="Top"/>
-        <AppBarButton x:Name="appBarButton" HorizontalAlignment="Left" Icon="Accept" Label="EventPage" Margin="916,116,0,0" VerticalAlignment="Top" Height="90" Width="296" Command="{Binding CreateEventCommand, Mode=TwoWay}">
+        <AppBarButton x:Name="appBarButton" HorizontalAlignment="Left" Icon="Accept" Label="EventPage" Margin="920,75,0,0" VerticalAlignment="Top" Height="90" Width="296" Command="{Binding CreateEventCommand, Mode=TwoWay}">
             <AppBarButton.DataContext>
                 <ViewModel:EventViewModel/>
             </AppBarButton.DataContext>
-            <Interactivity:Interaction.Behaviors>
-                <Core:EventTriggerBehavior EventName="Click">
-                    <Core:NavigateToPageAction TargetPage="EventMaker.View.EventPage"/>
-                </Core:EventTriggerBehavior>
-            </Interactivity:Interaction.Behaviors>
         </AppBarButton>
         <Button x:Name="button" Content="Create Event" HorizontalAlignment="Left" Margin="723,344,0,0" VerticalAlignment="Top" Height="77" Width="108"/>
         <TimePicker HorizontalAlignment="Left" Margin="164,459,0,0" VerticalAlignment="Top" Width="296" ClockIdentifier="24HourClock"/>

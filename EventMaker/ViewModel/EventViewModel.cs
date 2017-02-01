@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,8 +21,30 @@ namespace EventMaker.ViewModel
         public DateTimeOffset Date  { get; set; }
         public TimeSpan Time { get; set; }
         private eh.EventHandler EventHandler { get; set; }
+        private Event SelectedEvent;
+
+        public Event selectedEvent
+        {
+            get { return SelectedEvent; }
+            set { selectedEvent = value;
+                OnPropertyChanged(nameof(selectedEvent));
+                    }
+        }
+
+        #region vores PropertyChangedEventHandler 
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+        #endregion
 
         public ICommand CreateEventCommand { get; set; }
+        public Common.RelayCommand DeleteEventCommand { get; set; }
         public Common.RelayCommand MyRelayCommand { get; set; }
 
 
@@ -36,6 +59,7 @@ namespace EventMaker.ViewModel
             Time = new TimeSpan(dt.Hour, dt.Minute, dt.Second);
             eh.EventHandler eh = new eh.EventHandler();
             MyRelayCommand = new Common.RelayCommand(eh.CreateEvent);
+            DeleteEventCommand = new Common.RelayCommand(eh.DeleteEvent);
 
          }
 
