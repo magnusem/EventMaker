@@ -12,19 +12,19 @@ namespace EventMaker.Persistency
 {
     class PersistencyService
     {
-
         static private readonly string filename = "EventFile.json";
         static StorageFolder localfolder = null;
-        public static async void SaveEventsAsJasonAsync(ObservableCollection<Event> events)
-        {
-            string jsontext = JsonConvert.SerializeObject(events);
-            SerializeEventsFileAsync(jsontext, filename);
-        }
 
+        public static async void SaveEventAsJsonAsync(ObservableCollection<Event> events)
+        {
+            string jsonText = JsonConvert.SerializeObject(events);
+            SerializeEventsFileAsync(jsonText, filename);
+        }
 
         public static async Task<List<Event>> LoadEventsFromJsonAsync()
         {
             Model.EventCatalogSingleton.EventCatalogSingletonInstance.EventListe.Clear();
+
             Task<string> jsonTaskText = DeSerializeEventsFileAsync(filename);
 
             List<Event> newList = JsonConvert.DeserializeObject<List<Event>>(jsonTaskText.ToString());
@@ -32,25 +32,25 @@ namespace EventMaker.Persistency
             {
                 newList.Add(i);
             }
+            //Model.EventCatalogSingleton.Instance.EventListe
             return newList;
         }
 
 
-
-
-        public static async void SerializeEventsFileAsync(string eventsString, string fileName)
+        private static async void SerializeEventsFileAsync(string eventsString, string filename)
         {
-
+            StorageFile file = await localfolder.CreateFileAsync(filename, CreationCollisionOption.ReplaceExisting);
+            await FileIO.WriteTextAsync(file, eventsString);
         }
 
 
-        public static async Task<string> DeSerializeEventsFileAsync(String fileName)
+        private static async Task<string> DeSerializeEventsFileAsync(string filename)
         {
-            List<Event> nyListe = JsonConvert.DeserializeObject<List<Event>>(fileName);
-            foreach (var e in nyListe)
-            {
-                EventCatalogSingleton.EventCatalogSingletonInstance.EventListe.Add(e);
-            }
+            StorageFile file = await localfolder.GetFileAsync(filename);
+            string jsonText = await FileIO.ReadTextAsync(file);
+
+
+            return jsonText;
         }
     }
 }

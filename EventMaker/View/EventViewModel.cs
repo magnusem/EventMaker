@@ -38,5 +38,8 @@ namespace EventMaker.ViewModel
             MyRelayCommand = new Common.RelayCommand(eh.CreateEvent);
 
          }
+
+
+
     }
 }
