@@ -18,7 +18,7 @@
         <TextBox x:Name="textBox_Copy1" HorizontalAlignment="Left" Margin="164,369,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="72" Width="185"/>
         <TextBox x:Name="textBox_Copy2" HorizontalAlignment="Left" Margin="590,369,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="72" Width="185"/>
         <DatePicker HorizontalAlignment="Left" Margin="873,190,0,0" VerticalAlignment="Top"/>
-        <AppBarButton x:Name="appBarButton" HorizontalAlignment="Left" Icon="Accept" Label="Create Event" Margin="873,355,0,0" VerticalAlignment="Top" Height="90" Width="296" Command="{Binding CreateEventCommand}">
+        <AppBarButton x:Name="appBarButton" HorizontalAlignment="Left" Icon="Accept" Label="Create Event" Margin="873,355,0,0" VerticalAlignment="Top" Height="90" Width="296" Command="{Binding CreateEventCommand, Mode=TwoWay}">
             <AppBarButton.DataContext>
                 <ViewModel:EventViewModel/>
             </AppBarButton.DataContext>

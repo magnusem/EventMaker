@@ -28,16 +28,17 @@ namespace EventMaker.Model
         private EventCatalogSingleton() : base()
         {
             //event 1
-            EventListe.Add(new Event() { Id = 420, Description = "James Bond", Name = "Yamez Blunt", Place = "UK" });
+            EventCatalogSingletonInstance.EventListe.Add(new Event() { Id = 420, Description = "James Bond", Name = "Yamez Blunt", Place = "UK" });
 
             //event2
-            EventListe.Add(new Event() { Id = 008, Description = "Bind Semaj", Name = "Blazer Max", Place = "KU" });
+            EventCatalogSingletonInstance.EventListe.Add(new Event() { Id = 008, Description = "Bind Semaj", Name = "Blazer Max", Place = "KU" });
         }
 
         //tilføjer addEvent - gør det muligt at tilføje til vores observablecollection
         public void AddEvent()
         {
             EventListe.Add(NewEvent);
+
         }
 
     }
