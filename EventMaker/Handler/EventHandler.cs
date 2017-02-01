@@ -14,7 +14,6 @@ namespace EventMaker.Handler
 
         public EventHandler()
         {
-            
         }
 
 
