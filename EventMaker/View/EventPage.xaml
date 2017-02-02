@@ -43,7 +43,7 @@
                     VerticalAlignment="Top" 
                     Command="{Binding DeleteEventCommand}"
                     
-                    RelativePanel.Below="SelectedListItem">
+                    RelativePanel.Below="SelectedListItem" ToolTipService.ToolTip="Sletter valgte event">
                 <Button.DataContext>
                     <ViewModel:EventViewModel/>
                 </Button.DataContext>
