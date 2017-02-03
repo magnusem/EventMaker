@@ -22,6 +22,27 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
+    <Content Include="ModelDefinition\Package1_1212.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1213.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package2_1213.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package3_1213.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package4_1213.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1212.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1213.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="EventMakerSSD.sequencediagram">
       <SubType>Content</SubType>
@@ -29,6 +50,13 @@
     <Content Include="EventMakerSSD.sequencediagram.layout">
       <SubType>Content</SubType>
       <DependentUpon>EventMakerSSD.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="Klasse Diagram.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Klasse Diagram.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Klasse Diagram.classdiagram</DependentUpon>
     </Content>
     <Content Include="ModelDefinition\EventMakerSSD.uml">
       <SubType>Content</SubType>

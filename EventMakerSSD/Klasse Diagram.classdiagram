@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="711e924d-4463-43d0-8c6b-c73c9eb9165c" name="Klasse Diagram" linkedPackageId="0088bb99-177a-4690-ab78-958775feb005" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="ec34efc5-ebd0-4059-a21e-b3ac6c77d58f">
+      <profileInstance Id="2d4967b9-35b6-4083-a1c0-bc272b6281a8" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="c69f2e6b-a417-42c5-a891-ec6414db484b">
+      <profileInstance Id="9a8d797b-93a4-4e18-8379-91775ba87e32" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="64d97b47-4034-4451-85e7-c3446e64111a" name="View">
+        <elementDefinition Id="c18f9431-effe-4dbb-b782-f2065a7bc240" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="d5a5f3cd-1a49-4c8d-a870-33f74630134c" name="EventPage" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="0ff2d0ee-d517-4025-8d28-0f14aa098e22" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="8b02aae0-7870-4036-83fc-3602e062cb65" name="CreateEventPage" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="fc7c01fe-2813-4f58-adc0-9eaea4c3ce5a" />
+              <suppliersInternal>
+                <dependency Id="97fa5adb-5333-44db-933a-2a05e12d4c8b">
+                  <classMoniker Id="e9fc1039-c0ad-4e24-ae06-756bc5c02f5d" LastKnownName="RelayCommand" />
+                  <elementDefinition Id="99f1e018-ab20-4132-8c53-0ceeaf933fe7" />
+                </dependency>
+              </suppliersInternal>
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="df87839b-a66f-4022-a503-10bc5a52a55a" name="Viewmodel">
+        <elementDefinition Id="b91e025f-11e2-474e-b3a1-9ba669ae7a9d" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="0670e539-ea59-4648-b388-4db86503e3db" name="EventViewModel" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="93713c28-3abc-4ab0-943e-4052ffaff50d" />
+              <targetEnds>
+                <association Id="5c255eac-aaa5-424f-9377-4c8f5ceb35d1" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="60a07fb6-a69d-4a81-a852-ce5c5708f599" LastKnownName="EventCatalogSingleton" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="06f662b5-23d0-47aa-9d67-4783b5c672d4" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="49f2f05f-72e7-43df-bb79-da67eb128d23" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="79bfd58a-3a45-443f-ae91-fa8792da475c" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="4e58c201-de3e-49b8-af09-1fdd245db247" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="cc094fa6-222d-494b-b30e-9c70c03f2189" />
+                </association>
+              </targetEnds>
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="c63dafaa-118a-466c-b29d-56ca575c198c" name="Handler">
+        <elementDefinition Id="d42cc578-c58d-47ed-9eb1-84000bb74666" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="2b56ab82-f5d9-410d-92d6-3e01a113bd3f" name="EventHandler" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="2a87fc44-ff3c-491f-97a3-c238e16c293c" />
+              <suppliersInternal>
+                <dependency Id="d0e881b5-8078-4a98-ba3d-8762bd6a74ff">
+                  <classMoniker Id="ef37d32b-26dd-47bf-b79a-74a34ec57859" LastKnownName="DateTimeConverter" />
+                  <elementDefinition Id="f9d10533-f41b-4a05-995f-d19d9f3fa1a8" />
+                </dependency>
+              </suppliersInternal>
+              <targetEnds>
+                <association Id="166d6875-de7a-4f40-8d86-09046fd2cc06" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="0670e539-ea59-4648-b388-4db86503e3db" LastKnownName="EventViewModel" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="0683fb34-1edd-45b8-bf34-b38692f93231" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="8d83451b-fa47-4202-8d1c-d15aaa72622e" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="83ee649e-d55a-40a9-bdf9-f88eac510892" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="c62186c9-dfc7-4ef0-9cd3-af054446f6f3" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="6a40bc9d-3164-4b70-831a-325f00f7b6da" />
+                </association>
+              </targetEnds>
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="b6e253e3-8d42-41f1-a47e-6d93a57670bf" name="Common">
+        <elementDefinition Id="1e5590c0-a296-4ed8-86bf-a5f7441dd5cf" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="e9fc1039-c0ad-4e24-ae06-756bc5c02f5d" name="RelayCommand" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="337147ff-4d78-4f76-a66e-587738bae221" />
+              <suppliersInternal>
+                <dependency Id="8b0d7ad8-878a-4e00-81fb-f39f3e0c8ff6">
+                  <classMoniker Id="2b56ab82-f5d9-410d-92d6-3e01a113bd3f" LastKnownName="EventHandler" />
+                  <elementDefinition Id="458f1d30-4c98-4031-8a1b-c604b8d92a13" />
+                </dependency>
+              </suppliersInternal>
+              <ownedOperationsInternal>
+                <operation Id="eb66224c-c501-4bb8-a7d7-91d76834a9a0" name="Bool canExecute" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="4c9398dc-a34c-42bf-bf11-6d90426e0620" />
+                </operation>
+                <operation Id="05aaa4c5-ce16-4c22-873a-3852b8e00802" name="Execute" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="ad5f2478-628a-4e58-bd25-1abb5116e7e5" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="1096fe7c-5d38-41f3-b08f-8a65a8690d19" name="obj" direction="In" isUnique="false">
+                        <elementDefinition Id="17952c41-5de3-489f-b271-056f93da13b5" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="355058ac-913a-4f82-b6e0-bb72df457dab" name="RaiseCanExecute" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="8cafbdb6-56ab-4212-b896-d0ed1b524f58" />
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="ba5744f5-4136-4066-8cc7-6eb3d72a0c28" name="Converter">
+        <elementDefinition Id="fbf124f9-e5b7-426e-bcbe-d81e55039bee" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="ef37d32b-26dd-47bf-b79a-74a34ec57859" name="DateTimeConverter" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="b421ed19-bf3b-4575-ab3b-191e615c519c" />
+              <targetEnds>
+                <association Id="9b0f5313-dcdb-4501-9d72-5dbe704d0c4b" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="b832233e-c670-4a22-9ac5-1e459ed8bbfb" LastKnownName="Event : ObservableCollection" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="c0e28b81-67ff-4c63-a5e4-15e4c0f51074" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="d2dbda31-1331-4a48-b02b-94c8c89f2143" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="0a22b0ce-9797-4a63-a099-0ffd8f9ad3b5" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <lowerValueInternal>
+                          <literalString Id="370ed873-29b6-4f35-8748-233517da4332" name="Lower" value="*">
+                            <elementDefinition Id="d4c4de4b-f074-4a82-9b19-1ceedfc1c22d" />
+                          </literalString>
+                        </lowerValueInternal>
+                        <upperValueInternal>
+                          <literalString Id="c851e1dd-309c-4a3d-bf5e-82aa19a8a4c5" name="Upper" value="*">
+                            <elementDefinition Id="f69ed3b5-ac5f-4156-9bb9-093b270da701" />
+                          </literalString>
+                        </upperValueInternal>
+                        <elementDefinition Id="8960639f-1317-4f28-b3ef-fbe55770e758" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="ed58cdd6-2f68-4746-b0f6-2f9f6a472219" />
+                </association>
+              </targetEnds>
+              <ownedOperationsInternal>
+                <operation Id="b5b98497-3500-4e4d-b5a1-98c8815f8d44" name="DateTime DateTimeOffsetAndTimeSetToDateTime" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="7a7002b5-87cc-4a89-923f-94c42f495fd6" />
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="914bf355-bd41-43d9-ae70-31fea61f5b3e" name="Model">
+        <elementDefinition Id="20929e22-4532-4442-b218-e222738acf50" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="60a07fb6-a69d-4a81-a852-ce5c5708f599" name="EventCatalogSingleton" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="03e1d2e3-289d-45c9-9d07-011c8dc6266f" />
+              <suppliersInternal>
+                <dependency Id="8f25e8ea-882c-4dcc-9287-58f18bc91ca4">
+                  <classMoniker Id="60ecb4ec-3a0b-4514-b4cc-dd6bde2a8ed3" LastKnownName="PersistencyService" />
+                  <elementDefinition Id="24c9add8-3d60-4385-80f1-34d496328500" />
+                </dependency>
+              </suppliersInternal>
+              <targetEnds>
+                <association Id="b1523729-1df2-4ab6-9527-bdcfbdb41863" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="ef37d32b-26dd-47bf-b79a-74a34ec57859" LastKnownName="DateTimeConverter" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="d55ac2cf-1cde-48d4-a939-2dbe574f5617" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="e382ab70-eae2-4546-b4d3-0f4b5319084e" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="f5878352-86e9-4946-9d94-2792036d36c1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="ae0b91c1-8390-4699-9226-e30d7245713b" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="4ce5b1bf-3e2b-44bc-99e8-fd95c68c39ed" />
+                </association>
+              </targetEnds>
+              <ownedAttributesInternal>
+                <property Id="58afb9a3-2203-459a-96d5-8195cdfe20f1" name="EventCatalogSingleton" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="901f891c-6805-4390-89fa-a186bd8b8956" />
+                </property>
+                <property Id="f2255f8d-16a8-4eff-bbce-780c108248f1" name="obervablecollection&lt;Event&gt;" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b31743fe-093a-46f5-96dd-bf8f3499512e" />
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="c7d23c56-8a21-42d0-bbe1-1823d65801d7" name="Add" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="a91506f9-5698-42b0-bd75-bd7c7016190d" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="27f82607-9d13-46c2-9730-853e3b576845" name="Event newEvent" direction="In" isUnique="false">
+                        <elementDefinition Id="a2e39038-cb12-486e-a8af-c858cdb5befa" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="5356d6d0-f711-486d-a0f7-7166bc7daa5b" name="LoadEventsAsync" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="91d7ca5d-fb01-46b2-aa5e-e60a01edcdf1" />
+                </operation>
+                <operation Id="9805668c-f106-4ff1-869d-2249c2195f9c" name="Remove" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="acb7a2ef-cc53-4876-9eeb-5b1df511e0b2" />
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="b832233e-c670-4a22-9ac5-1e459ed8bbfb" name="Event : ObservableCollection" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="d59b48cc-b21c-4ea8-9ef0-3d25621fe9a4" />
+              <ownedAttributesInternal>
+                <property Id="48d3dbe8-b511-4d47-ae98-537aa4d1a470" name="DateTime DateTime" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1f5970f2-adce-483f-a36a-49a9a473329d" />
+                </property>
+                <property Id="0ad67f95-c4d2-4c37-995a-c3834588065a" name="int ID" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ca5cc7bd-9b69-4e91-b8c2-5c69a0489946" />
+                </property>
+                <property Id="c6505581-d350-4f46-9c5a-5cf5745d8e4d" name="string Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="741e9766-0d26-4817-8f12-b391a34e29f5" />
+                </property>
+                <property Id="3898e643-33e9-424b-95ce-16d9aa350338" name="String Place" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4a0d90cc-edef-444c-916d-20dfafaa0ad5" />
+                </property>
+                <property Id="2af4796c-1b4a-4b06-b0f0-795749494c3d" name="String Description" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="94c58ab4-2435-49cb-940a-3d3ca25dbff7" />
+                </property>
+              </ownedAttributesInternal>
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="95fc35e5-cd0c-4707-8b6a-c4e0b9c88060" name="Persistency">
+        <elementDefinition Id="82dffbf1-9279-4fb8-8847-78cf646e62c2" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="60ecb4ec-3a0b-4514-b4cc-dd6bde2a8ed3" name="PersistencyService" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="285c36b7-afaf-4a8c-9917-6051e625f059" />
+              <ownedAttributesInternal>
+                <property Id="da74c671-dc51-404b-97fa-fe6cf36be021" name="string eventFileName" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f82a35e7-aa77-4938-9ea9-3ec5ca1ccde3" />
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="0bf83a46-cb96-42b1-8ec3-2972f450a362" name="SaveEventAsJsonAsync" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="a1d69229-0680-4327-9d4f-e46a0e3838f3" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="9982895a-893d-455f-93c5-b7f9b6a64333" name="ObservableCollection" direction="In" isUnique="false">
+                        <elementDefinition Id="84344336-5c7f-405c-a66c-4def3b0c5f38" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="12d7ee75-ef1a-4f29-b82b-c30ec5b50a3c" name="SerializeEventsFileAsync" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="9506b1eb-fc20-415a-87f0-a09506c80fa8" />
+                </operation>
+                <operation Id="a68926c6-babe-4d3d-8a39-47f23dc9d198" name="task &lt;List&lt;Event&gt;&gt;" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="31fa2a67-0ad9-407e-9d04-0376c9e1e561" />
+                </operation>
+                <operation Id="5bef2be0-592b-470e-93c4-792a2d6a2c58" name="Task &lt;sting&gt; DeserializeEventFileAsync" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="0c9fd408-fdf9-44d4-a7f7-77398c8cf61b" />
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+  </packagedElements>
+  <package Id="0088bb99-177a-4690-ab78-958775feb005" name="EventMakerSSD">
+    <elementDefinition Id="85e306a8-36f4-49cf-bdd0-f2d8216ed792" />
+  </package>
+</logicalClassDesignerModel>
