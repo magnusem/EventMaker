@@ -28,13 +28,15 @@
             <TextBlock x:Name="DescTextBlcok" HorizontalAlignment="Left"  TextWrapping="Wrap" Text="Description:" VerticalAlignment="Top" Width="294" Height="18" Margin="0,0,0,5"/>
             <TextBox x:Name="DescTextBox" HorizontalAlignment="Left"  TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="8" Width="294" PlaceholderText="Description" Margin="0,0,0,17"/>
             <DatePicker HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,17"/>
-            <TimePicker HorizontalAlignment="Left"  VerticalAlignment="Top" Width="296" ClockIdentifier="24HourClock"/>
-            <AppBarButton x:Name="appBarButton" HorizontalAlignment="Right" Icon="Accept" Label="EventPage" VerticalAlignment="Center" Height="38" Width="113" Command="{Binding CreateEventCommand, Mode=TwoWay}">
+            <TimePicker HorizontalAlignment="Left"  VerticalAlignment="Top" Width="296" ClockIdentifier="24HourClock" Margin="0,0,0,17"/>
+            <AppBarButton x:Name="appBarButton" HorizontalAlignment="Right" Icon="Accept" Label="EventPage" VerticalAlignment="Center" Height="40" Width="291" Command="{Binding CreateEventCommand, Mode=TwoWay}">
                 <AppBarButton.DataContext>
                     <ViewModel:EventViewModel/>
                 </AppBarButton.DataContext>
             </AppBarButton>
         </StackPanel>
         <Button x:Name="button" Content="←" HorizontalAlignment="Right" VerticalAlignment="Top" Height="87" Width="92" Grid.Row="0" Margin="0,0,548,0" FontSize="48" FontFamily="Vivaldi"/>
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="493,42,0,0" TextWrapping="Wrap" Text="Indtast dit event her" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="45" Width="296" FontSize="32"/>
+        <TextBlock x:Name="textBlock3" Grid.Column="1" HorizontalAlignment="Left" Margin="882,542,-251,-2" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
     </Grid>
 </Page>
