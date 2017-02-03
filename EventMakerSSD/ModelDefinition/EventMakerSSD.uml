@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel"
   dslVersion="1.0.0.0"
   Id="85e306a8-36f4-49cf-bdd0-f2d8216ed792"
   name="EventMakerSSD" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -394,6 +394,55 @@
       <executionEvent
         Id="c7f2005e-ec67-47bf-8219-fa2820929bde"
         name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="5c3e2b7c-fedf-4810-b8b7-22018fbb3ad0"
+        name="Actor1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="c18f9431-effe-4dbb-b782-f2065a7bc240"
+        LastKnownName="View"
+        LastKnownLocation="Package_1212.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="b91e025f-11e2-474e-b3a1-9ba669ae7a9d"
+        LastKnownName="Viewmodel"
+        LastKnownLocation="Package1_1212.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="d42cc578-c58d-47ed-9eb1-84000bb74666"
+        LastKnownName="Handler"
+        LastKnownLocation="Package_1213.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="1e5590c0-a296-4ed8-86bf-a5f7441dd5cf"
+        LastKnownName="Common"
+        LastKnownLocation="Package1_1213.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="fbf124f9-e5b7-426e-bcbe-d81e55039bee"
+        LastKnownName="Converter"
+        LastKnownLocation="Package2_1213.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="20929e22-4532-4442-b218-e222738acf50"
+        LastKnownName="Model"
+        LastKnownLocation="Package3_1213.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="82dffbf1-9279-4fb8-8847-78cf646e62c2"
+        LastKnownName="Persistency"
+        LastKnownLocation="Package4_1213.uml" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
