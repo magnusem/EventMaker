@@ -21,19 +21,22 @@ namespace EventMaker.ViewModel
         public DateTimeOffset Date  { get; set; }
         public TimeSpan Time { get; set; }
         private eh.EventHandler EventHandler { get; set; }
-        private Event selectedEvent;
 
-        public Event SelectedEvent
+        #region Select event prop & instance field
+
+        private Event SelectedEvent;
+        public Event selectedEvent
         {
-            get { return selectedEvent; }
+            get { return SelectedEvent; }
             set
             {
-                selectedEvent = value;
-                OnPropertyChanged(nameof(SelectedEvent));
+                SelectedEvent = value;
+                OnPropertyChanged(nameof(selectedEvent));
             }
         }
 
-        public Event selectedEvent { get; set; }
+        #endregion
+
 
         #region vores PropertyChangedEventHandler 
         public event PropertyChangedEventHandler PropertyChanged;
