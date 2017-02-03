@@ -26,5 +26,10 @@ namespace EventMaker.View
         {
             this.InitializeComponent();
         }
+
+        private void PlaceTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
