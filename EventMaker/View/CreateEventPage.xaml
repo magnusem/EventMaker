@@ -23,15 +23,10 @@
         <StackPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"  Height="422" Margin="492,170,492,128" >
             <TextBlock x:Name="textBlock" HorizontalAlignment="Left"  TextWrapping="Wrap" Text="ID:" VerticalAlignment="Top" Width="103" Height="16" Margin="0,0,0,5"/>
             <TextBox x:Name="IDTextBox" HorizontalAlignment="Left"  TextWrapping="Wrap" Text="{Binding Id, Mode=TwoWay}" VerticalAlignment="Top" Height="32" Width="294" PlaceholderText="ID">
-                <TextBox.DataContext>
-                    <ViewModel:EventViewModel/>
-                </TextBox.DataContext>
             </TextBox>
             <TextBlock x:Name="textBlock1" HorizontalAlignment="Left"  TextWrapping="Wrap" Text="Place:" VerticalAlignment="Top" Width="294" Height="16"  Margin="0,0,0,5"/>
             <TextBox x:Name="PlaceTextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="10" Width="294" PlaceholderText="Place" TextChanged="PlaceTextBox_TextChanged">
-                <TextBox.DataContext>
-                    <ViewModel:EventViewModel/>
-                </TextBox.DataContext>
+
             </TextBox>
             <TextBlock x:Name="NameTextBlock" HorizontalAlignment="Left"  TextWrapping="Wrap" Text="Name:" VerticalAlignment="Top" Width="294" Height="17" Margin="0,0,0,5"/>
             <TextBox x:Name="NameTextBox" HorizontalAlignment="Left"  TextWrapping="Wrap" Text="{Binding Name, Mode=TwoWay}" VerticalAlignment="Top" Height="32" Width="294" PlaceholderText="Name"/>
@@ -40,9 +35,7 @@
             <DatePicker HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,17"/>
             <TimePicker HorizontalAlignment="Left"  VerticalAlignment="Top" Width="296" ClockIdentifier="24HourClock" Margin="0,0,0,33"/>
             <Button x:Name="button" Content="Add" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Transparent" BorderThickness="1" BorderBrush="Black" Command="{Binding CreateEventCommand}">
-                <Button.DataContext>
-                    <ViewModel:EventViewModel/>
-                </Button.DataContext>
+
             </Button>
         </StackPanel>
         <TextBlock x:Name="textBlock2" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Opret dit event her" VerticalAlignment="Top" Height="45" Width="296" FontSize="35" SelectionChanged="textBlock2_SelectionChanged" Margin="492,25,492,0"/>

@@ -21,25 +21,26 @@ namespace EventMaker.ViewModel
         public DateTimeOffset Date  { get; set; }
         public TimeSpan Time { get; set; }
         private eh.EventHandler EventHandler { get; set; }
-        private Event SelectedEvent;
+        private Event selectedEvent;
 
-        public Event selectedEvent
+        public Event SelectedEvent
         {
-            get { return SelectedEvent; }
-            set { selectedEvent = value;
-                OnPropertyChanged(nameof(selectedEvent));
-                    }
+            get { return selectedEvent; }
+            set
+            {
+                selectedEvent = value;
+                OnPropertyChanged(nameof(SelectedEvent));
+            }
         }
+
+        public Event selectedEvent { get; set; }
 
         #region vores PropertyChangedEventHandler 
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void OnPropertyChanged(string propertyName)
         {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         #endregion
 
@@ -49,7 +50,7 @@ namespace EventMaker.ViewModel
 
 
         private Model.EventCatalogSingleton minEventCataLogSingleton = Model.EventCatalogSingleton.EventCatalogSingletonInstance;
-        public Model.EventCatalogSingleton MinEventCataLogSingleton { get { return minEventCataLogSingleton; } }
+        public Model.EventCatalogSingleton inEventCataLogSingleton { get { return minEventCataLogSingleton; } }
 
 
         public EventViewModel()
@@ -57,9 +58,9 @@ namespace EventMaker.ViewModel
             DateTime dt = System.DateTime.Now;
             Date = new DateTimeOffset(dt.Year, dt.Month, dt.Day, 0, 0, 0, 0, new TimeSpan());
             Time = new TimeSpan(dt.Hour, dt.Minute, dt.Second);
-            eh.EventHandler eh = new eh.EventHandler();
-            MyRelayCommand = new Common.RelayCommand(eh.CreateEvent);
+            eh.EventHandler eh = new eh.EventHandler(this);
             DeleteEventCommand = new Common.RelayCommand(eh.DeleteEvent);
+            CreateEventCommand = new Common.RelayCommand(eh.CreateEvent);
 
          }
 

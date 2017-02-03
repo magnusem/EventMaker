@@ -12,8 +12,9 @@ namespace EventMaker.Handler
     {
         private EventViewModel evm { get; set; }
 
-        public EventHandler()
+        public EventHandler(EventViewModel evm)
         {
+            this.evm = evm;
         }
 
 
@@ -25,12 +26,12 @@ namespace EventMaker.Handler
             TempEventInfo.Place = evm.Place;
             TempEventInfo.Description = evm.Description;
             TempEventInfo.DateTime = Converter.DateTimeConverter.DateTimeOffsetAndTimeSetToDateTime(evm.Date, evm.Time);
-            Model.EventCatalogSingleton.EventCatalogSingletonInstance.EventListe.Add(TempEventInfo);
+            Model.EventCatalogSingleton.EventCatalogSingletonInstance.AddEvent(TempEventInfo);
         }
 
         public void DeleteEvent()
         {
-            Model.EventCatalogSingleton.EventCatalogSingletonInstance.RemoveEvent();
+            Model.EventCatalogSingleton.EventCatalogSingletonInstance.RemoveEvent(evm.SelectedEvent);
         }
 
 

@@ -14,7 +14,6 @@ namespace EventMaker.Model
         //props
         public ObservableCollection<Event> EventListe { get; set; }
         public Event NewEvent { get; set; }
-        public ViewModel.EventViewModel Minslected { get; set; }
 
         //laver en singleton
         private static EventCatalogSingleton eventCatalogSingletonInstance = new EventCatalogSingleton();
@@ -30,17 +29,17 @@ namespace EventMaker.Model
         {
             EventListe = new ObservableCollection<Event>();
             //event 1
-            EventListe.Add(new Event() { Id = 420, Description = "James Bond", Name = "Yamez Blunt", Place = "UK" });
+            EventListe.Add(new Event() { Id = 0001, Description = "Fodbold for alle er et hygge arangement for alle mellem 6-50", Name = "Fodbold for alle", Place = "Roskilde Stadion" });
 
             //event2
-            EventListe.Add(new Event() { Id = 008, Description = "Bind Semaj", Name = "Blazer Max", Place = "KU" });
+            EventListe.Add(new Event() { Id = 0002, Description = "Arrangement for pensionister i Roskilde Komune", Name = "Pensionist Bowling", Place = "Roskilde Bowlingcenter" });
 
-            Minslected = new ViewModel.EventViewModel();
+           
         }
 
 
         //tilføjer addEvent - gør det muligt at tilføje til vores observablecollection
-        public void AddEvent()
+        public void AddEvent(Event NewEvent)
         {
             EventListe.Add(NewEvent);
            
@@ -50,9 +49,9 @@ namespace EventMaker.Model
         //{
         //    PListe.Remove(SelectedElev);
         //}
-        public void RemoveEvent()
+        public void RemoveEvent(Event EventRemove)
         {
-            EventListe.Remove(Minslected.selectedEvent);
+            EventListe.Remove(EventRemove);
         }
 
         
