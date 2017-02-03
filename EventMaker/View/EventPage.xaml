@@ -11,7 +11,6 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -24,7 +23,7 @@
             </ListView.DataContext>
         </ListView>
 
-        <RelativePanel Grid.Row="1" Margin="-10,-10,10,10">
+        <RelativePanel>
             <TextBlock x:Name="SelectedListItem" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding selectedEvent}" VerticalAlignment="Top" Height="99" Width="411" Margin="227,510,-148,-510" >
                 <TextBlock.DataContext>
                     <ViewModel:EventViewModel/>
