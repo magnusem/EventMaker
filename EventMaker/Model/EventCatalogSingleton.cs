@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -44,16 +45,13 @@ namespace EventMaker.Model
             EventListe.Add(NewEvent);
            
         }
-
-        //public void SletElev()
-        //{
-        //    PListe.Remove(SelectedElev);
-        //}
         public void RemoveEvent(Event EventRemove)
         {
             EventListe.Remove(EventRemove);
         }
 
-        
+
+
+
     }
 }

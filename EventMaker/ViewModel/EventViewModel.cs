@@ -49,7 +49,9 @@ namespace EventMaker.ViewModel
 
         public ICommand CreateEventCommand { get; set; }
         public Common.RelayCommand DeleteEventCommand { get; set; }
-        public Common.RelayCommand MyRelayCommand { get; set; }
+        //public Common.RelayCommand MyRelayCommand { get; set; }
+        public Common.RelayCommand SaveEventsCommand { get; set; }
+        public Common.RelayCommand GemDataPåDiskCommand { get; set; }
 
 
         private Model.EventCatalogSingleton minEventCataLogSingleton = Model.EventCatalogSingleton.EventCatalogSingletonInstance;
@@ -62,9 +64,11 @@ namespace EventMaker.ViewModel
             Date = new DateTimeOffset(dt.Year, dt.Month, dt.Day, 0, 0, 0, 0, new TimeSpan());
             Time = new TimeSpan(dt.Hour, dt.Minute, dt.Second);
             eh.EventHandler eh = new eh.EventHandler(this);
+            
 
             DeleteEventCommand = new Common.RelayCommand(eh.DeleteEvent);
             CreateEventCommand = new Common.RelayCommand(eh.CreateEvent);
+            GemDataPåDiskCommand = new Common.RelayCommand(Persistency.PersistencyService.SaveEventAsJsonAsync);
 
          }
 
