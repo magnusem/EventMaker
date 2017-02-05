@@ -24,18 +24,25 @@
         </ListView>
 
         <RelativePanel>
-            <Button x:Name="button" Content="Add" HorizontalAlignment="Left" Height="55" VerticalAlignment="Top" Width="65" Margin="506,513,-520,-536" Background="Transparent" BorderBrush="Black">
+            <Button x:Name="button" Content="Add" HorizontalAlignment="Left" Height="55" VerticalAlignment="Top" Width="65" Margin="434,513,-446,-536" Background="Transparent" BorderBrush="Black">
                 <Interactivity:Interaction.Behaviors>
                     <Core:EventTriggerBehavior EventName="Click">
                         <Core:NavigateToPageAction TargetPage="EventMaker.View.CreateEventPage"/>
                     </Core:EventTriggerBehavior>
                 </Interactivity:Interaction.Behaviors>
             </Button>
-            <Button x:Name="button_Copy" Content="Delete" HorizontalAlignment="Left" Height="55" VerticalAlignment="Top" Width="65" Margin="720,513,-734,-536" Background="Transparent" BorderBrush="Black" Command="{Binding DeleteEventCommand}">
+            <Button x:Name="button_Copy" Content="Delete" HorizontalAlignment="Left" Height="55" VerticalAlignment="Top" Width="65" Margin="528,513,-542,-536" Background="Transparent" BorderBrush="Black" Command="{Binding DeleteEventCommand}">
 
             </Button>
             <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" Text="Events" VerticalAlignment="Top" Width="109" Margin="573,38,-620,-68" FontSize="35"/>
             <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="368" TextWrapping="Wrap" Text="{Binding SelectedEvent}" VerticalAlignment="Top" Width="190" Margin="864,112,-992,-460"/>
+            <Button x:Name="button_Copy2" Content="Save" HorizontalAlignment="Left" Height="55" VerticalAlignment="Top" Width="158" Margin="687,513,-794,-536" Background="Transparent" BorderBrush="Black" Click="button_Copy2_Click">
+                <Interactivity:Interaction.Behaviors>
+                    <Core:EventTriggerBehavior EventName="Click">
+                        <Core:NavigateToPageAction TargetPage="EventMaker.View.CreateEventPage"/>
+                    </Core:EventTriggerBehavior>
+                </Interactivity:Interaction.Behaviors>
+            </Button>
         </RelativePanel>
         <AppBarButton x:Name="appBarButton" HorizontalAlignment="Left" Icon="Home" Margin="10,14,0,0" VerticalAlignment="Top">
             <Interactivity:Interaction.Behaviors>
