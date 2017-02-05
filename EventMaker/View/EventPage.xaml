@@ -35,7 +35,7 @@
 
             </Button>
             <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" Text="Events" VerticalAlignment="Top" Width="109" Margin="573,38,-620,-68" FontSize="35"/>
-            <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="368" TextWrapping="Wrap" Text="{Binding Name}" VerticalAlignment="Top" Width="190" Margin="864,112,-992,-460"/>
+            <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="368" TextWrapping="Wrap" Text="{Binding SelectedEvent}" VerticalAlignment="Top" Width="190" Margin="864,112,-992,-460"/>
         </RelativePanel>
         <AppBarButton x:Name="appBarButton" HorizontalAlignment="Left" Icon="Home" Margin="10,14,0,0" VerticalAlignment="Top">
             <Interactivity:Interaction.Behaviors>

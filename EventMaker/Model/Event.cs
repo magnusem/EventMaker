@@ -26,7 +26,7 @@ namespace EventMaker.Model
         //overskrive to string
         public override string ToString()
         {
-            return Id + ", " +
+            return Id + ". " +
                 Name + ", " +
                 Description + ", " +
                 Place + ", " +
