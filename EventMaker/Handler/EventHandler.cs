@@ -31,7 +31,7 @@ namespace EventMaker.Handler
 
         public void DeleteEvent()
         {
-            Model.EventCatalogSingleton.EventCatalogSingletonInstance.RemoveEvent(evm.selectedEvent);
+            Model.EventCatalogSingleton.EventCatalogSingletonInstance.RemoveEvent(evm.SelectedEvent);
         }
 
 

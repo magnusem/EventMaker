@@ -24,14 +24,14 @@ namespace EventMaker.ViewModel
 
         #region Select event prop & instance field
 
-        private Event SelectedEvent;
-        public Event selectedEvent
+        private Event selectedEvent;
+        public Event SelectedEvent
         {
-            get { return SelectedEvent; }
+            get { return selectedEvent; }
             set
             {
-                SelectedEvent = value;
-                OnPropertyChanged(nameof(selectedEvent));
+                selectedEvent = value;
+                OnPropertyChanged(nameof(SelectedEvent));
             }
         }
 
@@ -53,7 +53,7 @@ namespace EventMaker.ViewModel
 
 
         private Model.EventCatalogSingleton minEventCataLogSingleton = Model.EventCatalogSingleton.EventCatalogSingletonInstance;
-        public Model.EventCatalogSingleton inEventCataLogSingleton { get { return minEventCataLogSingleton; } }
+        public Model.EventCatalogSingleton MinEventCataLogSingleton { get { return minEventCataLogSingleton; } }
 
 
         public EventViewModel()
@@ -62,6 +62,7 @@ namespace EventMaker.ViewModel
             Date = new DateTimeOffset(dt.Year, dt.Month, dt.Day, 0, 0, 0, 0, new TimeSpan());
             Time = new TimeSpan(dt.Hour, dt.Minute, dt.Second);
             eh.EventHandler eh = new eh.EventHandler(this);
+
             DeleteEventCommand = new Common.RelayCommand(eh.DeleteEvent);
             CreateEventCommand = new Common.RelayCommand(eh.CreateEvent);
 
