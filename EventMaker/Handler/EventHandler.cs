@@ -17,7 +17,6 @@ namespace EventMaker.Handler
             this.evm = evm;
         }
 
-
         public void CreateEvent()
         {
             Model.Event TempEventInfo = new Model.Event();
