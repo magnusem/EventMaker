@@ -13,7 +13,7 @@ namespace EventMaker.ViewModel
 {
     public class EventViewModel
     {
-
+        //prop's
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
@@ -47,9 +47,9 @@ namespace EventMaker.ViewModel
         }
         #endregion
 
+        //Knap prop
         public ICommand CreateEventCommand { get; set; }
         public Common.RelayCommand DeleteEventCommand { get; set; }
-        //public Common.RelayCommand MyRelayCommand { get; set; }
         public Common.RelayCommand SaveEventsCommand { get; set; }
         public Common.RelayCommand GemDataPåDiskCommand { get; set; }
 
@@ -57,7 +57,7 @@ namespace EventMaker.ViewModel
         private Model.EventCatalogSingleton minEventCataLogSingleton = Model.EventCatalogSingleton.EventCatalogSingletonInstance;
         public Model.EventCatalogSingleton MinEventCataLogSingleton { get { return minEventCataLogSingleton; } }
 
-
+        //ctor
         public EventViewModel()
         {
             DateTime dt = System.DateTime.Now;
