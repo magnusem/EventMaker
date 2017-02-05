@@ -36,12 +36,7 @@
             </Button>
             <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" Text="Events" VerticalAlignment="Top" Width="109" Margin="573,38,-620,-68" FontSize="35"/>
             <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="368" TextWrapping="Wrap" Text="{Binding SelectedEvent}" VerticalAlignment="Top" Width="190" Margin="864,112,-992,-460"/>
-            <Button x:Name="button_Copy2" Content="Save" HorizontalAlignment="Left" Height="55" VerticalAlignment="Top" Width="158" Margin="687,513,-794,-536" Background="Transparent" BorderBrush="Black" Command="{Binding GemDataPåDiskCommand, Mode=TwoWay}">
-                <Interactivity:Interaction.Behaviors>
-                    <Core:EventTriggerBehavior EventName="Click">
-                        <Core:NavigateToPageAction TargetPage="EventMaker.View.CreateEventPage"/>
-                    </Core:EventTriggerBehavior>
-                </Interactivity:Interaction.Behaviors>
+            <Button x:Name="button_Copy2" Content="Save" HorizontalAlignment="Left" Height="55" VerticalAlignment="Top" Width="158" Margin="687,513,-794,-536" Background="Transparent" BorderBrush="Black" Command="{Binding GemDataPåDiskCommand}">
             </Button>
         </RelativePanel>
         <AppBarButton x:Name="appBarButton" HorizontalAlignment="Left" Icon="Home" Margin="10,14,0,0" VerticalAlignment="Top">

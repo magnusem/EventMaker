@@ -70,6 +70,7 @@ namespace EventMaker.ViewModel
             CreateEventCommand = new Common.RelayCommand(eh.CreateEvent);
             GemDataPåDiskCommand = new Common.RelayCommand(Persistency.PersistencyService.SaveEventAsJsonAsync);
 
+            //TODO: skriv lige hent ind så den loader json på start 
          }
 
 
