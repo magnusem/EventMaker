@@ -15,6 +15,7 @@ namespace EventMaker.Handler
         public EventHandler(EventViewModel evm)
         {
             this.evm = evm;
+
         }
         public void CreateEvent()
         {
