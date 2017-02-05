@@ -50,6 +50,88 @@
             </relationshipOwnedElementsInternal>
           </association>
         </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="68dcc010-c5c2-4d61-8c0b-e67c2a32b646"
+            name="DateTimeOffset Date"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="95e96bdb-043e-40fc-9ca1-82c1460ae2d9"
+            name="Event SelectedEvent"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="bdde7a16-1fd4-4731-a133-8f3173a7921f"
+            name="EventCatalogSingleton"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="1e3aa103-b944-497e-8e99-e52d5d9a288a"
+            name="Icommand CreateEvent"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="95afedb1-1ea3-4bd4-a531-b3384cd8503a"
+            name="Relaycommand DeleteEvent"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="23f66c07-fc3f-4241-9034-39074bd5b29b"
+            name="int ID"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="dac38b6d-9540-4d00-ac05-bbcaf4bb8aff"
+            name="string Description"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="6e8db135-4aa5-4098-b297-11654b027881"
+            name="string Name"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="b2d4e760-574c-4d0f-9e55-adb80e52741c"
+            name="string Place"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="60b0a568-041f-44fa-8b89-7da87892a094"
+            name="TimeSpan Time"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
   </packagedElements>

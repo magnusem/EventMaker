@@ -1,19 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="711e924d-4463-43d0-8c6b-c73c9eb9165c" name="Klasse Diagram" linkedPackageId="0088bb99-177a-4690-ab78-958775feb005" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="ec34efc5-ebd0-4059-a21e-b3ac6c77d58f">
-      <profileInstance Id="2d4967b9-35b6-4083-a1c0-bc272b6281a8" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="c69f2e6b-a417-42c5-a891-ec6414db484b">
-      <profileInstance Id="9a8d797b-93a4-4e18-8379-91775ba87e32" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
+  <ownedCommentsInternal>
+    <comment Id="f7b9bb31-5f3b-46b7-8059-76e613ad5de9">
+      <elementDefinition Id="2148bfeb-d85d-4cf1-be35-6d740f40aae2" />
+      <body>BEMÆRK!
++ int ID
++ String Name
++ string Place
++ String Description
++TimeSpan Time
+---
+ikke er metoder!!
+men programmet smider selv "()" på</body>
+      <annotatedElements>
+        <classMoniker Id="0670e539-ea59-4648-b388-4db86503e3db" LastKnownName="EventViewModel" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
   <packagedElements>
     <logicalClassDesignerModelHasPackages>
       <package Id="64d97b47-4034-4451-85e7-c3446e64111a" name="View">
@@ -63,6 +66,38 @@
                   <elementDefinition Id="cc094fa6-222d-494b-b30e-9c70c03f2189" />
                 </association>
               </targetEnds>
+              <ownedOperationsInternal>
+                <operation Id="e6c712da-a233-4b6c-8ef5-26676c208b37" name="DateTimeOffset Date" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="68dcc010-c5c2-4d61-8c0b-e67c2a32b646" />
+                </operation>
+                <operation Id="8f871091-8972-446b-a290-f463a49a6074" name="Event SelectedEvent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="95e96bdb-043e-40fc-9ca1-82c1460ae2d9" />
+                </operation>
+                <operation Id="739ad280-0713-4645-88c2-9b6f05867d15" name="EventCatalogSingleton" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="bdde7a16-1fd4-4731-a133-8f3173a7921f" />
+                </operation>
+                <operation Id="c4236e85-75b8-44a9-b0cb-fe9d4ff9c08e" name="Icommand CreateEvent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="1e3aa103-b944-497e-8e99-e52d5d9a288a" />
+                </operation>
+                <operation Id="7c762c90-8ae4-442c-9834-a7f214431895" name="Relaycommand DeleteEvent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="95afedb1-1ea3-4bd4-a531-b3384cd8503a" />
+                </operation>
+                <operation Id="ec3765c1-97fc-49b5-a0f9-df7dea5e5646" name="int ID" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="23f66c07-fc3f-4241-9034-39074bd5b29b" />
+                </operation>
+                <operation Id="8342627a-1c99-4250-ba48-945ca5a72e06" name="string Description" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="dac38b6d-9540-4d00-ac05-bbcaf4bb8aff" />
+                </operation>
+                <operation Id="895c7683-bdfe-4fc0-8fca-8463d15be481" name="string Name" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="6e8db135-4aa5-4098-b297-11654b027881" />
+                </operation>
+                <operation Id="66b0ef25-1b1b-478c-9e38-0493bba14ed4" name="string Place" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="b2d4e760-574c-4d0f-9e55-adb80e52741c" />
+                </operation>
+                <operation Id="b3571ffa-4649-4cda-8b74-5cf2a81403e6" name="TimeSpan Time" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="60b0a568-041f-44fa-8b89-7da87892a094" />
+                </operation>
+              </ownedOperationsInternal>
             </class>
           </packageHasNamedElement>
         </packagedElements>
@@ -310,5 +345,19 @@
   </packagedElements>
   <package Id="0088bb99-177a-4690-ab78-958775feb005" name="EventMakerSSD">
     <elementDefinition Id="85e306a8-36f4-49cf-bdd0-f2d8216ed792" />
+    <profileInstances>
+      <packageHasProfileInstances Id="ec34efc5-ebd0-4059-a21e-b3ac6c77d58f">
+        <profileInstance Id="2d4967b9-35b6-4083-a1c0-bc272b6281a8" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="c69f2e6b-a417-42c5-a891-ec6414db484b">
+        <profileInstance Id="9a8d797b-93a4-4e18-8379-91775ba87e32" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>

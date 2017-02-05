@@ -3,6 +3,26 @@
   dslVersion="1.0.0.0"
   Id="85e306a8-36f4-49cf-bdd0-f2d8216ed792"
   name="EventMakerSSD" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="2148bfeb-d85d-4cf1-be35-6d740f40aae2">
+      <body>BEMÆRK!
++ int ID
++ String Name
++ string Place
++ String Description
++TimeSpan Time
+---
+ikke er metoder!!
+men programmet smider selv "()" på</body>
+      <annotatedElements>
+        <classMoniker
+          Id="93713c28-3abc-4ab0-943e-4052ffaff50d"
+          LastKnownName="EventViewModel"
+          LastKnownLocation="Package1_1212.uml" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances
       Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
