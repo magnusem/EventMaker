@@ -20,7 +20,6 @@ namespace EventMaker.Model
         //ctor
         public Event()
         {
-
         }
 
 
