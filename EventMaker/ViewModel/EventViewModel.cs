@@ -52,6 +52,7 @@ namespace EventMaker.ViewModel
         public Common.RelayCommand DeleteEventCommand { get; set; }
         public Common.RelayCommand SaveEventsCommand { get; set; }
         public Common.RelayCommand GemDataPåDiskCommand { get; set; }
+        public Common.RelayCommand HentDataPåDiskCommand { get; set; }
 
 
         private Model.EventCatalogSingleton minEventCataLogSingleton = Model.EventCatalogSingleton.EventCatalogSingletonInstance;
@@ -69,7 +70,7 @@ namespace EventMaker.ViewModel
             DeleteEventCommand = new Common.RelayCommand(eh.DeleteEvent);
             CreateEventCommand = new Common.RelayCommand(eh.CreateEvent);
             GemDataPåDiskCommand = new Common.RelayCommand(Persistency.PersistencyService.SaveEventAsJsonAsync);
-
+            HentDataPåDiskCommand = new Common.RelayCommand(Model.EventCatalogSingleton.EventCatalogSingletonInstance.HentJson);
             //TODO: skriv lige hent ind så den loader json på start 
          }
 

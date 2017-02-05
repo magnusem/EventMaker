@@ -31,12 +31,12 @@ namespace EventMaker.Model
             EventListe = new ObservableCollection<Event>();
             //event 1
             EventListe.Add(new Event() { Id = 0001, Description = "Fodbold for alle er et hygge arangement for alle mellem 6-50", Name = "Fodbold for alle", Place = "Roskilde Stadion" });
-
+            
             //event2
             EventListe.Add(new Event() { Id = 0002, Description = "Arrangement for pensionister i Roskilde Komune", Name = "Pensionist Bowling", Place = "Roskilde Bowlingcenter" });
-
-           
+            HentJson();
         }
+
 
 
         //tilføjer addEvent - gør det muligt at tilføje til vores observablecollection
@@ -50,7 +50,10 @@ namespace EventMaker.Model
             EventListe.Remove(EventRemove);
         }
 
-
+        public async void HentJson()
+        {
+            EventListe = await Persistency.PersistencyService.LoadEventsFromJsonAsync();
+        }
 
 
     }
