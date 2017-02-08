@@ -20,7 +20,7 @@
             <RowDefinition Height="*"  />
 
         </Grid.RowDefinitions>
-        <StackPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"  Height="422" Margin="492,170,492,128" >
+        <StackPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"  Height="422" >
             <TextBlock x:Name="textBlock" HorizontalAlignment="Left"  TextWrapping="Wrap" Text="ID:" VerticalAlignment="Top" Width="103" Height="16" Margin="0,0,0,5"/>
             <TextBox x:Name="IDTextBox" HorizontalAlignment="Left"  TextWrapping="Wrap" Text="{Binding Id, Mode=TwoWay}" VerticalAlignment="Top" Height="32" Width="294" PlaceholderText="ID">
             </TextBox>
@@ -38,7 +38,7 @@
 
             </Button>
         </StackPanel>
-        <TextBlock x:Name="textBlock2" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Opret dit event her" VerticalAlignment="Top" Height="45" Width="296" FontSize="35" SelectionChanged="textBlock2_SelectionChanged" Margin="492,25,492,0"/>
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Opret dit event her" VerticalAlignment="Top" Height="45" Width="296" FontSize="35" SelectionChanged="textBlock2_SelectionChanged"/>
         <AppBarButton x:Name="appBarButton" HorizontalAlignment="Left" Icon="Home" Margin="10,14,0,0" VerticalAlignment="Top">
             <Interactivity:Interaction.Behaviors>
                 <Core:EventTriggerBehavior EventName="Click">

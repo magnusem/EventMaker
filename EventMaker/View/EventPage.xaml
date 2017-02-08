@@ -20,7 +20,7 @@
             <ColumnDefinition Width="*" />
 
         </Grid.ColumnDefinitions>
-        <ListView x:Name="listView1" HorizontalAlignment="Left" Height="382" VerticalAlignment="Top" Width="411" ItemsSource="{Binding MinEventCataLogSingleton.EventListe}" SelectedItem="{Binding SelectedEvent, Mode=TwoWay}" Margin="434,106,0,0" BorderThickness="1" BorderBrush="black">
+        <ListView x:Name="listView1" HorizontalAlignment="Center" Height="382" VerticalAlignment="Center" Width="411" ItemsSource="{Binding MinEventCataLogSingleton.EventListe}" SelectedItem="{Binding SelectedEvent, Mode=TwoWay}"  BorderThickness="1" BorderBrush="black" Margin="0,0,0,99">
         </ListView>
 
         <RelativePanel>
